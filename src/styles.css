@@ -1,3 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+
+:root {
+  /* Hintergründe */
+  --bg-main: rgb(5, 0, 10);
+  /* Sehr dunkles, fast schwarzes Violett */
+  --bg-sidebar: rgb(8, 2, 14);
+  /* Sidebar-Hintergrund */
+  --bg-card: rgb(13, 5, 23);
+  /* Kacheln / Input-Feld Hintergrund */
+  --bg-card-hover: rgb(22, 9, 38);
+  /* Hover-Zustand für Karten */
+
+  /* Rahmen (Borders) */
+  --border-sidebar: rgb(25, 12, 40);
+  /* Vertikale Trennlinie rechts der Sidebar */
+  --border-card: rgb(45, 18, 75);
+  /* Lila Rahmen der Kacheln & Input-Box */
+  --border-accent: rgb(200, 0, 255);
+  /* Neon-Lila Rahmen (z. B. Sprachblase) */
+
+  /* Akzente & Text */
+  --accent-purple: rgb(180, 50, 255);
+  /* Leuchtendes Neon-Lila */
+  --text-primary: rgb(255, 255, 255);
+  /* Weißer Haupttext */
+  --text-muted: rgb(150, 140, 175);
+  /* Muted/Graulila Text */
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
