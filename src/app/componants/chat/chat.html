@@ -1,67 +1,169 @@
-<div class="w-full max-w-3xl mx-auto p-4 bg-[#0a0512] z-50">
-  <!-- Haupt-Input-Container mit dunklem Hintergrund, lila Rand und Glow-Effekt -->
-  <div
-    class="relative w-full rounded-2xl border border-purple-900/60 bg-[#120824]/90 p-4 shadow-lg shadow-purple-950/20 backdrop-blur-md focus-within:border-purple-600 transition-all">
+<!-- Top Header Bar -->
+<header class="flex items-center justify-end px-6 py-4 gap-3 z-10 shrink-0">
+  <button type="button"
+    class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-purple-600/50 bg-purple-950/40 text-purple-200 hover:text-white hover:bg-purple-900/60 transition text-xs font-medium shadow-md shadow-purple-950/50">
+    <svg class="w-3.5 h-3.5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+    </svg>
+    Upgrade
+  </button>
+  <button type="button"
+    class="flex items-center justify-center w-8 h-8 rounded-full border border-purple-800/40 bg-purple-950/30 text-gray-300 hover:text-white transition">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+    </svg>
+  </button>
+</header>
 
-    <!-- Textarea / Eingabefeld -->
-    <textarea rows="2" placeholder="Stelle eine Frage oder beschreibe, was du brauchst..."
-      class="w-full bg-transparent text-gray-200 placeholder-gray-500 resize-none outline-none text-base font-normal mb-4"></textarea>
+<!-- Main Scrollable / Centered Flex Area -->
+<main class="flex-1 flex flex-col justify-between items-center px-4 pb-4 overflow-y-auto custom-scrollbar relative z-0">
 
-    <!-- Untere Leiste: Buttons & Tools -->
-    <div class="flex items-center justify-between gap-2">
+  <!-- Spacer to help push hero section down nicely -->
+  <div class="flex-1 min-h-[20px]"></div>
 
-      <!-- Linke Seite: Plus-Button, Websuche & Code Interpreter -->
-      <div class="flex items-center gap-2 flex-wrap">
-        <!-- Plus Button -->
-        <button type="button"
-          class="flex items-center justify-center w-9 h-9 rounded-full border border-purple-800/40 bg-purple-950/30 text-gray-300 hover:bg-purple-900/40 hover:text-white transition">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-          </svg>
-        </button>
+  <!-- Background Glow & Hero Header Section -->
+  <div class="w-full max-w-4xl flex flex-col items-center justify-center relative mb-6 shrink-0">
 
-        <!-- Websuche Pill-Button -->
-        <button type="button"
-          class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-purple-800/40 bg-purple-950/30 text-xs font-medium text-gray-300 hover:bg-purple-900/40 hover:text-white transition">
-          <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10" stroke-width="2" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-          </svg>
-          Websuche
-        </button>
+    <!-- Background Glow Graphic -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none -z-10">
+      <div class="w-[550px] h-[320px] bg-purple-600/25 rounded-full blur-[110px]"></div>
+    </div>
 
-        <!-- Code Interpreter Pill-Button -->
-        <button type="button"
-          class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-purple-800/40 bg-purple-950/30 text-xs font-medium text-gray-300 hover:bg-purple-900/40 hover:text-white transition">
-          <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          Code Interpreter
-        </button>
+    <!-- Pink Duck & Speech Bubble Positioned on Right -->
+    <div class="hidden lg:flex absolute -right-2 top-1/2 -translate-y-1/2 items-center pointer-events-none z-10">
+      <!-- Speech Bubble -->
+      <div
+        class="relative bg-[#120524]/90 border border-pink-500 text-pink-200 px-4 py-2 rounded-2xl text-xs font-semibold shadow-lg shadow-pink-500/20 backdrop-blur-md -mr-4 mb-20 whitespace-nowrap animate-bounce-subtle">
+        Keine Panik, ich quack das! 🦆
+        <!-- Pointer -->
+        <div class="absolute -right-2 top-1/2 -translate-y-1/2 w-0 h-0 border-t-6 border-t-transparent border-l-8 border-l-pink-500 border-b-6 border-b-transparent"></div>
       </div>
 
-      <!-- Rechte Seite: Mikrofon & Absende-Button -->
-      <div class="flex items-center gap-2">
-        <!-- Mikrofon-Button -->
-        <button type="button"
-          class="flex items-center justify-center w-9 h-9 rounded-full border border-purple-800/40 bg-purple-950/30 text-gray-300 hover:bg-purple-900/40 hover:text-white transition">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-          </svg>
-        </button>
+      <!-- Pink Duck Image -->
+      <img src="assets/duck_no_bg (1).png" alt="Pink Duck" class="w-48 h-48 object-contain filter drop-shadow-[0_0_25px_rgba(217,70,239,0.45)]" />
+    </div>
 
-        <!-- Absende-Button (Senden-Pfeil) -->
-        <button type="button"
-          class="flex items-center justify-center w-9 h-9 rounded-full bg-purple-600 text-white hover:bg-purple-500 transition shadow-md shadow-purple-600/30">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-          </svg>
-        </button>
-      </div>
-
+    <!-- Central Hero Title -->
+    <div class="text-center z-10 px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-3 leading-tight">
+        Wie kann ich dir <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-pink-500 bg-clip-text text-transparent">helfen?</span>
+      </h1>
+      <p class="text-gray-400 text-sm md:text-base font-normal max-w-lg mx-auto">
+        Dein KI-Assistent für Cybersecurity, Pentesting & mehr.
+      </p>
     </div>
   </div>
-</div>
+
+  <!-- Chat Input Component -->
+  <div class="w-full max-w-3xl mx-auto mb-6 z-10 shrink-0">
+    <app-chat-input></app-chat-input>
+  </div>
+
+  <!-- 4 Feature Cards Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 w-full max-w-4xl mx-auto mb-6 shrink-0">
+    <!-- Card 1 -->
+    <div
+      class="flex flex-col justify-between p-4 rounded-2xl border border-purple-900/40 bg-[#120824]/60 hover:bg-[#190a33]/90 hover:border-purple-600/60 transition cursor-pointer group shadow-lg backdrop-blur-sm min-h-[140px]">
+      <div>
+        <div
+          class="w-10 h-10 rounded-xl bg-purple-950/70 border border-purple-800/40 flex items-center justify-center text-purple-400 mb-3 group-hover:border-purple-500/60 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9" stroke-width="2" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v8M8 12h8" />
+          </svg>
+        </div>
+        <h3 class="text-white font-semibold text-sm mb-1">Vulnerability Scan</h3>
+        <p class="text-gray-400 text-xs leading-relaxed">Scanne Systeme nach Schwachstellen.</p>
+      </div>
+      <div class="flex justify-end mt-2 text-purple-400 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div
+      class="flex flex-col justify-between p-4 rounded-2xl border border-purple-900/40 bg-[#120824]/60 hover:bg-[#190a33]/90 hover:border-purple-600/60 transition cursor-pointer group shadow-lg backdrop-blur-sm min-h-[140px]">
+      <div>
+        <div
+          class="w-10 h-10 rounded-xl bg-purple-950/70 border border-purple-800/40 flex items-center justify-center text-purple-400 mb-3 group-hover:border-purple-500/60 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3" stroke-width="2" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3a4.5 4.5 0 0 0-4.5 4.5 9 9 0 0 0 1.5 5M12 3a4.5 4.5 0 0 1 4.5 4.5 9 9 0 0 1-1.5 5M6.5 17a4.5 4.5 0 0 1-1.5-5.5 9 9 0 0 1 5.2-1.5M17.5 17a4.5 4.5 0 0 0 1.5-5.5 9 9 0 0 0-5.2-1.5" />
+          </svg>
+        </div>
+        <h3 class="text-white font-semibold text-sm mb-1">Malware Analyse</h3>
+        <p class="text-gray-400 text-xs leading-relaxed">Untersuche Malware und verdächtige Dateien.</p>
+      </div>
+      <div class="flex justify-end mt-2 text-purple-400 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div
+      class="flex flex-col justify-between p-4 rounded-2xl border border-purple-900/40 bg-[#120824]/60 hover:bg-[#190a33]/90 hover:border-purple-600/60 transition cursor-pointer group shadow-lg backdrop-blur-sm min-h-[140px]">
+      <div>
+        <div
+          class="w-10 h-10 rounded-xl bg-purple-950/70 border border-purple-800/40 flex items-center justify-center text-purple-400 mb-3 group-hover:border-purple-500/60 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <h3 class="text-white font-semibold text-sm mb-1">Threat Intelligence</h3>
+        <p class="text-gray-400 text-xs leading-relaxed">Aktuelle Bedrohungen und IoCs analysieren.</p>
+      </div>
+      <div class="flex justify-end mt-2 text-purple-400 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div
+      class="flex flex-col justify-between p-4 rounded-2xl border border-purple-900/40 bg-[#120824]/60 hover:bg-[#190a33]/90 hover:border-purple-600/60 transition cursor-pointer group shadow-lg backdrop-blur-sm min-h-[140px]">
+      <div>
+        <div
+          class="w-10 h-10 rounded-xl bg-purple-950/70 border border-purple-800/40 flex items-center justify-center text-purple-400 mb-3 group-hover:border-purple-500/60 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+        <h3 class="text-white font-semibold text-sm mb-1">OSINT Search</h3>
+        <p class="text-gray-400 text-xs leading-relaxed">Informationen aus offenen Quellen finden.</p>
+      </div>
+      <div class="flex justify-end mt-2 text-purple-400 opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Spacer bottom -->
+  <div class="flex-1 min-h-[20px]"></div>
+
+  <!-- Bottom Disclaimer Footer -->
+  <footer class="w-full max-w-4xl flex items-center justify-between text-xs text-gray-500 pt-2 pb-1 shrink-0 px-2">
+    <div></div>
+    <div class="flex items-center gap-1.5 text-gray-400 font-medium">
+      <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke-width="2" />
+        <path d="M7 11V7a5 5 0 0110 0v4" stroke-width="2" />
+      </svg>
+      <span>HackerGPT kann Fehler machen. Überprüfe wichtige Informationen.</span>
+    </div>
+    <button type="button" aria-label="Hilfe"
+      class="flex items-center justify-center w-7 h-7 rounded-full border border-purple-900/60 bg-purple-950/30 text-gray-400 hover:text-white hover:border-purple-600 transition">
+      ?
+    </button>
+  </footer>
+</main>

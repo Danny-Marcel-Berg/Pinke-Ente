@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { Sidebar } from './componants/sidebar/sidebar';
+import { ChatInput } from "./componants/chat-input/chat-input";
 import { Chat } from "./componants/chat/chat";
 @Component({
   selector: 'app-root',
