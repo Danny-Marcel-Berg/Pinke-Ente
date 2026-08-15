@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-chat',
   imports: [],
@@ -7,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './chat.css',
 })
 export class Chat {
-  
+
 }
