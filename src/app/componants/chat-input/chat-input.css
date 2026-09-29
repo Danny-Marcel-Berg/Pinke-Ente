@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.custom-input-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-input-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-input-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(147, 51, 234, 0.3);
+  border-radius: 9999px;
+}
